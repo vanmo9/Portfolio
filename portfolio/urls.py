@@ -24,7 +24,7 @@ from django.urls import path
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^index', app_views.index, name = 'index'),
-
+    url(r'',include('app.urls')) 
 ]
 
 if settings.DEBUG:
