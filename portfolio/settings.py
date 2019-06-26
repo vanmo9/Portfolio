@@ -25,7 +25,7 @@ SECRET_KEY = '_#d3j39m5_d92j=f-j*1x*mj6itwyk1(x35b07&-hmz)x9=c@s'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mohassanportfolio.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -77,10 +77,18 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'portfolio',
+        'USER': 'mohamed',
+    'PASSWORD':'mo',
     }
 }
 
